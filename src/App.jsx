@@ -12,7 +12,7 @@ function App() {
   event.preventDefault();
   try{
     await signInWithEmailAndPassword(auth, email, senha);
-    alert('Login realizado com sucesso�');
+    alert('Login realizado com sucesso');
   }catch(err){
     alert('Erro no processo', err)
   }
@@ -24,7 +24,7 @@ function App() {
     <>
     <main>
       <div>
-        <h3>Fazer Login</h3>
+      <h3>Fazer Login</h3>
       </div>
       <form onSubmit={autenticarComFirebase}>
       <label htmlFor='email'>
