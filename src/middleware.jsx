@@ -1,6 +1,7 @@
 import { Link, Navigate, Outlet } from 'react-router-dom';
 import { jwtVerify } from 'jose';
 import { useEffect, useState } from 'react';
+import Registra from './Registrar';
 
 const AuthMiddleware = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(null);

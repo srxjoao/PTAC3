@@ -2,11 +2,15 @@ import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import { auth } from './config/firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth'; 
-import './App.css'
+import { Link } from 'react-router-dom';
 import { SignJWT } from 'jose';
+import './index.css'
 
 
 function App() {
+  //ADMIN 
+  //gmail teste: admin@gmail.com
+  //senha:admin123
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const navigate = useNavigate();
@@ -58,6 +62,9 @@ function App() {
            </label>
            </form>
            <button type="subimt" onClick={autenticarComFirebase}>Realiza Login</button>
+           <Link to="/Registrar">
+           <p className='link' >Não tenho conta,criar uma</p>
+           </Link>
     </main>
     </>
   )
